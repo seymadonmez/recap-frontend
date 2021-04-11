@@ -12,6 +12,7 @@ export class BrandComponent implements OnInit {
   brands:Brand[]=[];
   dataLoaded=false;
   currentBrand:Brand={brandId:1,brandName:" "};
+  filterText=""
   constructor(private brandService:BrandService) { }
 
   ngOnInit(): void {

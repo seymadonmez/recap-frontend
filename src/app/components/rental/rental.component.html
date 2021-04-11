@@ -5,7 +5,8 @@
   <table *ngIf="rentalDetails" class="table table-striped m-4">
       <thead>
         <tr>
-          <th scope="col">#</th>
+          <th scope="col">ID</th>
+          <th scope="col">Car Name</th>
           <th scope="col">Brand</th>
           <th scope="col">User</th>
           <th scope="col">Company</th>
@@ -16,6 +17,7 @@
       <tbody>
         <tr *ngFor="let rental of rentalDetails">
           <th scope="row">{{rental.id}}</th>
+          <th scope="row">{{rental.carName}}</th>
           <th scope="row">{{rental.brandName}}</th>
           <th scope="row">{{rental.userName}}</th>
           <th scope="row">{{rental.companyName}}</th>
@@ -24,3 +26,4 @@
         </tr>
       </tbody>
     </table>
+

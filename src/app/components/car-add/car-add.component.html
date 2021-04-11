@@ -1,0 +1,77 @@
+<p> </p>
+<div class="content">
+    <div class="col-md-12">
+        <div class="card card-accent-success mb-3" style="border-radius: 18px; color: darkgreen; border-color: rgb(47, 107, 89); ">
+            <div class="card-header"><h5 class="title">Araba ekle</h5></div>
+            <div class="card-body">  
+                <form [formGroup]="carAddForm">
+                    <div class="mb-3">
+                        <label for="carName"><h5>Model Adı</h5></label>
+                        <div class="form-group">
+                            <input type="text" id="carName" formControlName="carName" class="form-control" placeholder="Model Adı" /> 
+                        </div>
+                    </div>                   
+                </form>
+                <form [formGroup]="carAddForm">
+                    <div class="mb-3">
+                        <label for="brandName"><h5>Marka Adı</h5></label>
+                        <div class="form-group">
+                            <input type="text" id="brandName" formControlName="brandName" class="form-control" placeholder="Marka Adı" /> 
+                        </div>
+                    </div>
+                </form>
+                <form [formGroup]="carAddForm">
+                    <div class="mb-3">
+                        <label for="colorName"><h5>Renk</h5></label>
+                        <div class="form-group">
+                            <input type="text" id="colorName" formControlName="colorName" class="form-control" placeholder="Renk" /> 
+                        </div>
+                    </div>              
+                </form>
+                <form [formGroup]="carAddForm">
+                    <div class="mb-3">
+                        <label for="dailyPrice"><h5>Günlük Ücret</h5></label>
+                        <div class="form-group">
+                            <input type="number" id="dailyPrice" formControlName="dailyPrice" class="form-control" placeholder="Günlük Ücret" /> 
+                        </div>
+                    </div>
+                </form>
+                <form [formGroup]="carAddForm">
+                    <div class="mb-3">
+                        <label for="modelYear"><h5>Model Yılı</h5></label>
+                        <div class="form-group">
+                            <input type="number" id="modelYear" formControlName="modelYear" class="form-control" placeholder="Model Yılı" /> 
+                        </div>
+                    </div>
+                </form>
+                <form [formGroup]="carAddForm">
+                    <div class="mb-3">
+                        <label for="description"><h5>Açıklama</h5></label>
+                    <div class="form-group">
+                        <input type="text" id="description" formControlName="description" class="form-control" placeholder="Açıklama" /> 
+                    </div>
+                    </div>                  
+                </form>
+               <form [formGroup]="carAddForm">
+                <div class="mr-auto border p-6">
+                    <form method="post" enctype="multipart/form-data">
+                      <div class="form-group">
+                        <label><h5>Fotoğraf Yükle</h5></label>
+                        <div class="custom-file">
+                          <input type="file" name="files[]" multiple class="custom-file-input form-control" id="customFile">
+                          <label class="custom-file-label" for="customFile">Dosya Seç</label>
+                        </div>
+                      </div>
+                      <div class="form-group" >
+                        <button type="button" name="upload" value="upload" id="upload" class="btn btn-block btn-dark"><i class="fa fa-fw fa-upload"></i> Yükle</button>
+                      </div>
+                    </form>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-fill btn-lg btn-block btn-success" (click)="add()" >Ekle</button>
+            </div>
+        </div>   
+    </div>
+</div>
