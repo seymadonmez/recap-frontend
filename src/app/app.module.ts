@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -22,6 +22,9 @@ import { RentalAddComponent } from './components/rental-add/rental-add.component
 import { PaymentComponent } from './components/payment/payment.component';
 import { CarAddComponent } from './components/car-add/car-add.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { CustomerComponent } from './components/customer/customer.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { LoginComponent } from './components/login/login.component';
     RentalAddComponent,
     PaymentComponent,
     CarAddComponent,
-    LoginComponent
+    LoginComponent,
+    CustomerComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +56,9 @@ import { LoginComponent } from './components/login/login.component';
       positionClass:"toast-bottom-right"
     })
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

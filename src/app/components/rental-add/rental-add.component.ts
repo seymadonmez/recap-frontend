@@ -5,6 +5,7 @@ import { CarDetail } from 'src/app/models/carDetail';
 import { Customer } from 'src/app/models/customer';
 import { Rental } from 'src/app/models/rental';
 import { RentalDetail } from 'src/app/models/rentalDetail';
+import { AuthService } from 'src/app/services/auth.service';
 import { CustomerService } from 'src/app/services/customer.service';
 import { RentalService } from 'src/app/services/rental.service';
 
@@ -32,7 +33,8 @@ export class RentalAddComponent implements OnInit {
 
     private router: Router,
     private customerService: CustomerService,
-    private toastr: ToastrService) { }
+    private toastr: ToastrService,
+    private authService:AuthService) { }
 
   ngOnInit(): void {
     this.getCustomer();
@@ -70,6 +72,16 @@ export class RentalAddComponent implements OnInit {
       this.toastr.error(error.error)
       console.log(rental)
     })
+  }
+
+  isLogOK(){
+    if(this.authService.isAuthenticated()){
+      return true;
+    }else{
+      this.toastr.error("Must be Login or Register")
+      this.router.navigate(['/homepage'])
+      return false;
+    }
   }
 
 }

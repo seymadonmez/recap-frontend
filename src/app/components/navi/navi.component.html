@@ -7,20 +7,29 @@
       </a>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Brands</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Colors</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Daily Prices</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        <li><a href="#" class="nav-link px-2 text-secondary">Anasayfa</a></li>
+        <li><a  routerLink="/cars" href="#" class="nav-link px-2 text-white">Araçlar</a></li>
+        <li><a routerLink="/brands" href="#" class="nav-link px-2 text-white">Markalar</a></li>
+        <li><a href="#" class="nav-link px-2 text-white">Hakkımızda</a></li>
       </ul>
 
       <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-        <input type="search" class="form-control form-control-dark" placeholder="Search...">
+        <input type="search" class="form-control form-control-dark" placeholder="Arayın...">
       </form>
+      <div class="btn-group"  *ngIf="isAuthenticated()" >
+        <button id="auth" type="button" class="btn  dropdown-toggle auth" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-person-circle"></i> 
+      
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end  dropdown-menu-lg-start">
+          <li><button routerLink="user" class="dropdown-item" type="button">Profil</button></li>
+          <li><button (click)="logout()" class="dropdown-item" type="button"> <i class="bi bi-box-arrow-right"></i> Çıkış</button></li>
+        </ul>
+      </div>
 
       <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
+        <button type="button" class="btn btn-outline-light me-2">Giriş Yap</button>
+        <button type="button" class="btn btn-warning">Kayıt Ol</button>
       </div>
     </div>
   </div>

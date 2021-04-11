@@ -32,11 +32,12 @@
                 car.dailyPrice | currency: "TRY":"symbol-narrow":"1.2-2"
               }}
             </p>
-            <a (click)="setCurrentCar(car)" routerLink="/cars/detail/{{car.carId}}" class="btn btn-primary"
+            
+            <a (click)="setCurrentCar(car)" routerLink="/cars/detail/{{car.carId}}" class="btn btn-info"
               >Detaylar</a
             >
-            <a routerLink="/carUpdate/{{ car.carId }}" class="btn btn-outline-primary float-end"
-              >Guncelle</a
+            <a routerLink="/rental-add/{{ car.carId }}" class="btn btn-outline-info float-end"
+              >Kirala</a
             >
           </div>
         </div>

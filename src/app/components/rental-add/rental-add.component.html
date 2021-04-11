@@ -4,7 +4,7 @@
     </button>
   </div>
   
-  <div  class="modal fade" id="rentModal" tabindex="-1" aria-labelledby="rentModalLabel" aria-hidden="true">
+  <div *ngIf="isLogOK()"  class="modal fade" id="rentModal" tabindex="-1" aria-labelledby="rentModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
   
@@ -17,7 +17,7 @@
   
         <div class="modal-body" >
   
-          <label for="dailyPrice" class="col-4 col-form-label">Daily Price:</label>
+          <label for="dailyPrice" class="col-4 col-form-label">Günlük Ücret: </label>
           <div class="form-group row mb-2">
             <div class="col-8">
               <input id="dailyPrice" type="text" disabled="disabled" class="form-control"
@@ -25,7 +25,7 @@
             </div>
           </div>
   
-          <label for="customer" class="col-4 col-form-label">Customer :</label>
+          <label for="customer" class="col-4 col-form-label">Müşteri :</label>
           <div class="form-group row mb-2">
             <div class="col-8">
               <select [(ngModel)]="customerId" class="form-select" >
@@ -36,7 +36,7 @@
             </div>
           </div>
   
-          <label for="rentDate" class="col-4 col-form-label">Rent Date:</label>
+          <label for="rentDate" class="col-4 col-form-label">Kiralama Başlangıç Tarihi:</label>
           <div class="form-group row mb-2">
             <div class="col-8">
               <input class="form-control" min="{{ getDate(1) }}" value="{{ getDate(1) }}" type="date"
@@ -44,7 +44,7 @@
             </div>
           </div>
   
-          <label for="returnDate" class="col-4 col-form-label">Return Date:</label>
+          <label for="returnDate" class="col-4 col-form-label">Kiralama Bitiş Tarihi</label>
           <div class="form-group row">
             <div class="col-8">
               <input class="form-control" type="date" min="{{ getDate(2) }}" value="{{ getDate(2) }}"
@@ -57,7 +57,7 @@
   
         <div class="modal-footer">
           <button data-bs-dismiss="modal" (click)="createRental()" type="button" class="btn btn-outline-success">
-            Rent
+            Kirala
           </button>
         </div>
   

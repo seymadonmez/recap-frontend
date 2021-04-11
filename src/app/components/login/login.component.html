@@ -1,8 +1,17 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="wrapper fadeInDown zero-raduis">
 <body class="text-center">
-    
+    <div id="formContent">
+		<!-- Icon -->
+		<div class="fadeIn first">
+			<h2 class="my-5">OTURUM AÇ</h2>
+		</div>
     <main class="form-signin">
       <form [formGroup]="loginForm">
-        <h1 class="h3 mb-3 fw-normal">Giriş Yap</h1>
+    
     
         <div class="form-floating">
           <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
@@ -18,7 +27,11 @@
           </label>
         </div>
         <button class="w-100 btn btn-lg btn-primary" (click)="login()">Giriş Yap</button>
+        <h2>Hesabınız yok mu ?</h2>
+			<input routerLink="/register" type="button" class="fadeIn fourth zero-raduis pc" value="Kayıt Ol">
         <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
       </form>
     </main>
+    </div>
 </body>
+</div>
