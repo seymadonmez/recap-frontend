@@ -21,6 +21,7 @@ import {ToastrModule} from 'ngx-toastr';
 import { RentalAddComponent } from './components/rental-add/rental-add.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { CarAddComponent } from './components/car-add/car-add.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CarAddComponent } from './components/car-add/car-add.component';
     ColorFilterPipe,
     RentalAddComponent,
     PaymentComponent,
-    CarAddComponent
+    CarAddComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

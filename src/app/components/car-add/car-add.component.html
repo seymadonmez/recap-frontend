@@ -6,25 +6,29 @@
             <div class="card-body">  
                 <form [formGroup]="carAddForm">
                     <div class="mb-3">
-                        <label for="carName"><h5>Model Adı</h5></label>
+                        <label for="name"><h5>Model Adı</h5></label>
                         <div class="form-group">
-                            <input type="text" id="carName" formControlName="carName" class="form-control" placeholder="Model Adı" /> 
+                            <input type="text" id="name" formControlName="name" class="form-control" placeholder="Model Adı" /> 
                         </div>
                     </div>                   
                 </form>
                 <form [formGroup]="carAddForm">
                     <div class="mb-3">
-                        <label for="brandName"><h5>Marka Adı</h5></label>
+                        <label for="brandId"><h5>Marka Adı</h5></label>
                         <div class="form-group">
-                            <input type="text" id="brandName" formControlName="brandName" class="form-control" placeholder="Marka Adı" /> 
+                            <select id="brandId" class="form-select" formControlName="brandId">
+                                <option [ngValue]="brand.brandId" *ngFor="let brand of brands">{{ brand.brandName }}</option>
+                              </select>
                         </div>
                     </div>
                 </form>
                 <form [formGroup]="carAddForm">
                     <div class="mb-3">
-                        <label for="colorName"><h5>Renk</h5></label>
+                        <label for="colorId"><h5>Renk</h5></label>
                         <div class="form-group">
-                            <input type="text" id="colorName" formControlName="colorName" class="form-control" placeholder="Renk" /> 
+                            <select id="colorId" class="form-select" formControlName="colorId">
+                                <option [ngValue]="color.colorId" *ngFor="let color of colors">{{ color.colorName }}</option>
+                              </select>
                         </div>
                     </div>              
                 </form>
