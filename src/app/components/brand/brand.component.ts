@@ -40,4 +40,18 @@ export class BrandComponent implements OnInit {
     }
   }
 
+  getCurrentAllBrandClass(){
+    if(this.currentBrand.brandId==0){
+      return "list-group-item active"
+    }else{
+      return "list-group-item"
+    }
+  }
+  
+  nullCurrentBrand(){
+    this.currentBrand={brandId:0,brandName:""};;
+  }
+
+  
+
 }

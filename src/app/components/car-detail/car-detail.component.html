@@ -43,54 +43,35 @@
     </div>
   </div>
   <div class="col-md-5">
-    <div class="card">
-      <div class="card-header">Araba Detayları</div>
-      <div class="card-body">
-        <table *ngIf="car" class="table table-success table-striped">
-          <tbody>
-            <tr>
-              <th scope="row">Marka :</th>
-              <td>{{ car.brandName }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Model :</th>
-              <td>{{ car.carName }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Renk :</th>
-              <td>{{ car.colorName }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Fiyat :</th>
-              <td>
-                {{ car.dailyPrice | currency: "TRY":"symbol-narrow":"1.2-2" }}
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Model Yılı :</th>
-              <td>{{ car.modelYear }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Açıklama :</th>
-              <td>{{ car.description }}</td>
-            </tr>
+    <div *ngIf="car" class="card">
+      <div class="card-header p-3 mb-2 bg-dark bg-gradient text-white" >Araba Detayları</div>
+      <ul class="list-group list-group-flush" *ngIf="car">
+        <li class="list-group-item">Marka : {{ car.brandName }}</li>
+        <li class="list-group-item">Model : {{ car.carName }}</li>
+        <li class="list-group-item">Renk : {{ car.colorName }}</li>
+        <li class="list-group-item">
+          Model Yılı : {{ car.modelYear }}
+        </li>
+        <li class="list-group-item">
+          Günlük Fiyat : {{car.dailyPrice | currency: "₺"}}
+        </li>
+      </ul>
+      <div class="card-footer">
+      <div class="card-body" >
 
-            <tr *ngIf="dataLoaded">
-                <td><button
-                    routerLink="/cars"
-                    (click)="getBack()"
-                    type="button"
-                    class="btn btn-info btn-md active"
-                    class="text-center"
-                  > Geri Dön</button></td>  
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="card-footer"></div>
-      <div class="d-grid gap-2 m-2" *ngIf="car ">
         <app-rental-add [car]="car"></app-rental-add>
+        
+        <button class="btn btn-primary float-end"  routerLink="/cars"
+        (click)="getBack()"  style="background: rgb(0, 134, 139)">
+          Geri&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 18 20">
+            <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+          </svg>
+        </button>
       </div>
     </div>
+    </div>
+    <br />
   </div>
 </div>
+
+

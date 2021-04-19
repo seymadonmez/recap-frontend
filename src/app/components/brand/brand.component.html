@@ -1,8 +1,26 @@
+<div
+  *ngIf="dataLoaded == false"
+  class="spinner-border text-info"
+  role="status"
+>
+  <span class="visually-hidden">Loading...</span>
+</div>
+
+<ul *ngIf="dataLoaded == true" class="list-group">
+  <li
+    (click)="nullCurrentBrand()"
+    [class]="getCurrentAllBrandClass()" 
+    routerLink="/cars" 
+    class="p-3 mb-2 bg-dark bg-gradient text-white" 
+    aria-current="true"
+  >Tüm Markalar</li> 
+
+
 <div class="mb-3">
   <label for="filterText" class="form-label">Marka Ara</label>
   <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="arama ifadesi giriniz">
 </div>
-<div *ngIf="filterText.length>2" class="alert alert-primary">
+<div *ngIf="filterText.length>2" class="alert alert-info">
   {{filterText}} aradınız
 </div>
 
