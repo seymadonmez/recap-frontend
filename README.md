@@ -33,7 +33,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ![paymentDetail](https://user-images.githubusercontent.com/77541232/115168056-5d0a7c80-a0c2-11eb-85a5-202cf5d6f069.JPG)
 <br/>
 
-![carAdd](https://user-images.githubusercontent.com/77541232/115168161-a5299f00-a0c2-11eb-8922-8323181ba6fe.JPG)
+![carrAddBlack](https://user-images.githubusercontent.com/77541232/115171056-d908c280-a0ca-11eb-8bae-607ace6dcd63.JPG)
 <br/>
 
 ![Login](https://user-images.githubusercontent.com/77541232/115169877-f0927c00-a0c7-11eb-881d-cecc66c46d1d.JPG)
