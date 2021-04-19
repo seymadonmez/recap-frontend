@@ -14,6 +14,34 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Pipe
 - JWT
 
+## Project Images
+![carlist](https://user-images.githubusercontent.com/77541232/115167774-5cbdb180-a0c1-11eb-9914-d76a0a5bccb3.JPG)
+<br/>
+
+![car-filter](https://user-images.githubusercontent.com/77541232/115167816-7e1e9d80-a0c1-11eb-95cc-21acc6fc4316.JPG)
+<br/>
+
+![carDetails](https://user-images.githubusercontent.com/77541232/115167830-8a0a5f80-a0c1-11eb-91fa-8308ceb1d2cc.JPG)
+<br/>
+
+![renting](https://user-images.githubusercontent.com/77541232/115167906-d5247280-a0c1-11eb-9cee-0297d4a3a213.JPG)
+<br/>
+
+![Payment](https://user-images.githubusercontent.com/77541232/115168038-4cf29d00-a0c2-11eb-99b6-d1c0ba1f1d95.JPG)
+<br/>
+
+![paymentDetail](https://user-images.githubusercontent.com/77541232/115168056-5d0a7c80-a0c2-11eb-85a5-202cf5d6f069.JPG)
+<br/>
+
+![carAdd](https://user-images.githubusercontent.com/77541232/115168161-a5299f00-a0c2-11eb-8922-8323181ba6fe.JPG)
+<br/>
+
+![Login](https://user-images.githubusercontent.com/77541232/115169877-f0927c00-a0c7-11eb-881d-cecc66c46d1d.JPG)
+<br/>
+
+![Register](https://user-images.githubusercontent.com/77541232/115169995-3c452580-a0c8-11eb-8920-f22fd0a16399.JPG)
+<br/>
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
